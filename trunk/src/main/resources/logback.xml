@@ -1,0 +1,25 @@
+<!-- configuration file for logback -->
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{HH:mm:ss} %-5level %msg [%logger{36} - %thread]%n</Pattern>
+	    </layout>
+	</appender>
+
+	<!-- replace "info with "debug", etc -->
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<logger name="braindrop">
+		<level value="INFO" />
+	</logger>
+
+<!-- 
+	<logger name="">
+		<level value="DEBUG" />
+	</logger>
+ -->
+
+</configuration>
